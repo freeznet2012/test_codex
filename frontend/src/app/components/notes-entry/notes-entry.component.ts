@@ -14,18 +14,19 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 })
 export class NotesEntryComponent {
   isSubmitting = false;
-
-  readonly noteForm = this.fb.group({
-    title: ['', [Validators.required, Validators.maxLength(120)]],
-    content: ['', [Validators.required, Validators.maxLength(4000)]]
-  });
+  readonly noteForm;
 
   constructor(
     private readonly fb: FormBuilder,
     private readonly notesService: NotesService,
     private readonly snackBar: MatSnackBar,
     private readonly router: Router
-  ) {}
+  ) {
+    this.noteForm = this.fb.group({
+      title: ['', [Validators.required, Validators.maxLength(120)]],
+      content: ['', [Validators.required, Validators.maxLength(4000)]]
+    });
+  }
 
   submit(): void {
     if (this.noteForm.invalid || this.isSubmitting) {
