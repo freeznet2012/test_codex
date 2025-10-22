@@ -1,0 +1,29 @@
+.list-card {
+  display: block;
+}
+
+.search-bar {
+  margin-bottom: 1rem;
+}
+
+.table-container {
+  overflow: auto;
+  margin-bottom: 0.5rem;
+}
+
+table {
+  width: 100%;
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 0;
+}
+
+.empty-state {
+  text-align: center;
+  color: rgba(0, 0, 0, 0.54);
+  padding: 1.5rem 0;
+}

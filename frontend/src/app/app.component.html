@@ -1,0 +1,16 @@
+<mat-toolbar color="primary" class="app-toolbar">
+  <span class="app-title">{{ title }}</span>
+  <span class="spacer"></span>
+  <a mat-button routerLink="" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">
+    <mat-icon>list</mat-icon>
+    All Notes
+  </a>
+  <a mat-flat-button color="accent" routerLink="/new" routerLinkActive="active-link">
+    <mat-icon>note_add</mat-icon>
+    New Note
+  </a>
+</mat-toolbar>
+
+<main class="app-content">
+  <router-outlet></router-outlet>
+</main>
